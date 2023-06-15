@@ -7,17 +7,17 @@ const TodosLogic = () => {
     [
       {
         id: 1,
-        title: 'Setup development environment',
+        title: 'Setup development',
         completed: true,
       },
       {
         id: 2,
-        title: 'Develop website and add content',
+        title: 'Develop website',
         completed: false,
       },
       {
         id: 3,
-        title: 'Deploy to live server',
+        title: 'Deploy',
         completed: false,
       },
     ],

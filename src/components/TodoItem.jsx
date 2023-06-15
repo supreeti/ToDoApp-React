@@ -17,6 +17,7 @@ const TodoItem = ({ itemProp, setTodos, delTodo }) => {
     <div className="listItem">
       <input
         type="checkbox"
+        // eslint-disable-next-line react/prop-types
         checked={itemProp.completed}
         onChange={() => handleChange(itemProp.id)}
       />

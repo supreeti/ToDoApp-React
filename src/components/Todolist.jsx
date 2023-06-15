@@ -6,7 +6,7 @@ import TodosLogic from './TodosLogic';
 
 const Todolist = () => (
   <div className="App">
-    <Header /> 
+    <Header />
     <TodosLogic />
     {/* <Addtodo />
     <ListSection /> */}
