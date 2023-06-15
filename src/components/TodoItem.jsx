@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TodoItem = ({ itemProp, setTodos, delTodo }) => {
   const handleChange = (id) => {
@@ -17,7 +18,6 @@ const TodoItem = ({ itemProp, setTodos, delTodo }) => {
     <div className="listItem">
       <input
         type="checkbox"
-        // eslint-disable-next-line react/prop-types
         checked={itemProp.completed}
         onChange={() => handleChange(itemProp.id)}
       />
@@ -25,6 +25,16 @@ const TodoItem = ({ itemProp, setTodos, delTodo }) => {
       <button onClick={() => delTodo(itemProp.id)} type="button">Delete</button>
     </div>
   );
+};
+
+TodoItem.propTypes = {
+  itemProp: PropTypes.shape({
+    completed: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+  setTodos: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
